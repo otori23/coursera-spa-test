@@ -15,11 +15,11 @@
         // Home page
         .state('home', {
             url: '/',
-            templateUrl: '/scripts/menu/templates/home.template.html'
+            templateUrl: 'scripts/menu/templates/home.template.html'
         })
         .state('menuCategories', {
             url: '/menu-categories',
-            templateUrl: '/scripts/menu/templates/categories.template.html',
+            templateUrl: 'scripts/menu/templates/categories.template.html',
             controller: 'MenuCategoriesController as categoriesCtrl',
             resolve: {
                 categories: ['MenuDataService', function (MenuDataService) {
@@ -29,7 +29,7 @@
         })
         .state('items', {
             url: '/items/{categoryShortName}',
-            templateUrl: '/scripts/menu/templates/items.template.html',
+            templateUrl: 'scripts/menu/templates/items.template.html',
             controller: 'CategoryItemsController as itemsCtrl',
             resolve: {
                 items: ['$stateParams', 'MenuDataService', function ($stateParams, MenuDataService) {
