@@ -12,11 +12,13 @@
         // *** Set up UI states ***
         $stateProvider
     
-        // Home page
+        // Home Page
         .state('home', {
             url: '/',
             templateUrl: 'scripts/menu/templates/home.template.html'
         })
+
+        // Menu Categories Page
         .state('menuCategories', {
             url: '/menu-categories',
             templateUrl: 'scripts/menu/templates/categories.template.html',
@@ -27,6 +29,8 @@
                 }]
             }
         })
+
+        // Category Items Page
         .state('items', {
             url: '/items/{categoryShortName}',
             templateUrl: 'scripts/menu/templates/items.template.html',
