@@ -9,7 +9,6 @@
       var infoCtrl = this;
     
       infoCtrl.userInfo = angular.copy(userInfo);
-      console.log(infoCtrl.userInfo);
     }
     
 })();
