@@ -57,10 +57,13 @@
         <div class="form-group">
             <label for="favorite" class="col-sm-2 control-label">Favorite ID</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="favorite" name-"favorite" placeholder="Favorite Dish ID (i.e. short name)"
+                <input type="text" class="form-control" id="favorite" name="favorite" placeholder="Favorite Dish ID (i.e. short name)"
                 ng-model="signupCtrl.favorite"
-                >
-                <span ng-if="signupCtrl.error">No such menu number exists!</span>
+                ng-model-options="{ updateOn: 'mousedown blur' }"
+                favorite>
+                <span ng-if="signupForm.favorite.$touched && signupForm.favorite.$error.favorite">
+                    No such menu number exists!
+                </span>
             </div>
         </div>
 
