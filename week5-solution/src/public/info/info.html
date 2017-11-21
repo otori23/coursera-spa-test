@@ -1,0 +1,36 @@
+<div class="container" ng-if="infoCtrl.userInfo === undefined">
+    <h2>Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now</a></h2>
+</div>
+
+<div class="container" ng-if="infoCtrl.userInfo !== undefined">
+    <div class="row">
+        <div class="col-sm-2"><p class="text-right">First Name</p></div>
+        <div class="col-sm-10">{{infoCtrl.userInfo.firstname}}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2"><p class="text-right">Last Name</p></div>
+        <div class="col-sm-10">{{infoCtrl.userInfo.lastname}}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2"><p class="text-right">Email</p></div>
+        <div class="col-sm-10">{{infoCtrl.userInfo.email}}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2"><p class="text-right">Telephone</p></div>
+        <div class="col-sm-10">{{infoCtrl.userInfo.telephone}}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2"><p class="text-right">Favorite</p></div>
+        <div class="col-sm-10">
+            <div class="row">
+                <div class="col-sm-5 menu-item-photo">
+                    <img class="img-responsive" ng-src="{{infoCtrl.userInfo.favorite.image}}" alt="">
+                </div>
+                <div class="col-sm-7 menu-item-description">
+                  <h3 class="menu-item-title">{{infoCtrl.userInfo.favorite.title}}</h3>
+                  <p class="menu-item-details">{{infoCtrl.userInfo.favorite.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
