@@ -28,7 +28,7 @@ describe('The favorite directive', function() {
     it('should find an exisiting favorite', function() {
         $httpBackend.whenGET(ApiPath + '/menu_items/A10.json').respond(200, {message: 'success'});
 
-        $rootScope.signupCtrl = {favorite: null};
+        //$rootScope.signupCtrl = {favorite: null};
 
         var element = $compile(html)($rootScope);
         
@@ -43,7 +43,7 @@ describe('The favorite directive', function() {
     it('should not find an undefined favorite', function() {
         $httpBackend.whenGET(ApiPath + '/menu_items/A100.json').respond(400, {message: 'error'});
 
-        $rootScope.signupCtrl = {favorite: null};
+        //$rootScope.signupCtrl = {favorite: null};
 
         var element = $compile(html)($rootScope);
         
