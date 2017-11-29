@@ -9,7 +9,6 @@
         return {
             require: 'ngModel',
             link: function(scope, elm, attrs, ctrl) {
-              console.log(ctrl);
               ctrl.$asyncValidators.favorite = function(modelValue, viewValue) {
                   return $http.get(ApiPath + '/menu_items' + '/' + modelValue + ".json");
               };
